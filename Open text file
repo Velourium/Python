@@ -1,0 +1,11 @@
+#
+# SEC290.FA2022.12362.B1
+# Zackary Capps
+# October 5 2022
+# Ex6-2
+#
+fp = open("ex6-2-data.txt")
+
+for line_num, line in enumerate(fp, 1):
+    line = line.strip()
+    print(f'{line_num}: {line}')
