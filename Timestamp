@@ -1,0 +1,9 @@
+#
+# SEC290.FA2022.12362.B1
+# Zackary Capps
+# October 5 2022
+# Ex6-1
+#
+import time
+timeStamp = time.ctime()
+print(timeStamp)
