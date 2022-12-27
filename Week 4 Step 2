@@ -1,0 +1,37 @@
+#
+# SEC290.FA2022.12362.B1
+# Zackary Capps
+# September 25 2022
+# HWK 4 Step 2
+#
+def menu():
+    print("Window Administration Application")
+    print()
+    print("a: Exit application")
+    print("b: Enter an attribute")
+    print("c: Calculate and display the aspect ratio.")
+    print("d: Display the window attributes and values")
+    print()   
+    
+attributes = {}
+
+while True:
+    menu()
+    option = input("Please choose a, b, c or d: ")
+    if option == "a":
+        print(" Done!")
+        break
+    elif option == "b" :
+        name = input("Please enter the attribute name: ")
+        value = int(input("Please enter the attribute value: "))
+        attributes[name] = value
+        print(f'{name}:{value} have been added to the dictionary.')
+    elif option == "c" :
+        print("Calculate aspect ratio selected")
+    elif option == "d" :
+        print("Displaying the attributes and values selected")
+        for name, value in attributes.items():
+            print(name, ":", value)
+        loop=False
+    else:
+        print("Only a, b, c or d are acceptable")
