@@ -1,0 +1,13 @@
+capitals = {"Delaware": "Dover", "New York": "Albany", "Florida": "Tallahassee"}
+print(capitals)
+print("Delete each state from the dictionary.")
+while len(capitals) > 0:
+    state = input("Enter the state to be deleted: ")
+    try:
+        del capitals[state]
+    except KeyError:
+        print(f'{state} is not in the dictionary.')
+        print(f'Here are the remaining keys: {capitals.keys()}.')
+    else:
+        print(f'{state} has been removed from the dictionary.')
+print("Done!")
