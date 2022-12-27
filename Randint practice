@@ -1,0 +1,10 @@
+from random import randint
+
+total = 0
+num_additions = 0
+while total <= 1000:
+    num = randint(1,10)
+    total = total + num
+    num_additions += 1
+    print(f'Total: {total}, # of additions: {num_additions}')
+print("Done!")
