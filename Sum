@@ -1,0 +1,12 @@
+#
+# SEC290.FA2022.12362.B1
+# Zackary Capps
+# September 28 2022
+# Ex5-2
+#
+from safe_input import int_input
+
+num_1 = int_input("Please enter the first number to be added: ")
+num_2 = int_input("Please enter the second number to be added: ")
+total = num_1 + num_2
+print(f'{num_1} + {num_2} = {total}')
