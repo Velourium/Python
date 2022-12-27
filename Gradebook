@@ -1,0 +1,67 @@
+#
+# SEC290.FA2022.12362.B1
+# Zackary Capps
+# October 16 2022
+# Wk7 ex1
+#
+from statistics import mean
+from typing import List
+
+class Gradebook:
+    
+    stuCount = 0
+    def __init__(self, name):  
+        # Gradebook Student
+        Gradebook.stuCount += 1
+        self.name = name
+        self.grades = [] #the quiz scores for the student
+        print(f'There are {Gradebook.stuCount} students in the Gradebook.')
+    def quizScore(self, score):
+        self.score = score
+        self.grades.append(self)
+    # currentAverage of Student
+    def currentAverage(self):
+        grades = self.grades
+        for name in self.name:
+            average = mean(grades)
+            show_results(grades, average)
+        
+        
+        
+stu1 = Gradebook(
+    name = input(f'Enter the name for Student {Gradebook.stuCount +1} :'))
+stu2 = Gradebook(
+    name = input(f'Enter the name for Student {Gradebook.stuCount +1} :'))
+
+def menu():
+    print(" ")
+    print("Grade Book")
+    print(" ")
+    print("0: Exit ")
+    print("1: Enter quiz grade for Student 1")
+    print("2: Enter quiz grade for Student 2")
+    print("3: Display current grades for all students")
+    print(" ")
+
+while True:
+    menu()
+    option = input("Please enter a choice: ")
+    if option == "0":
+        print("Goodbye!")
+        break
+    elif option == "1" :
+        stu1.quizScore(score = int(input('Please enter a quiz score for Student 1: ')))
+    elif option == "2" :
+        stu2.quizScore(score = int(input('Please enter a  quiz score for Student 2: ')))
+    elif option == "3" :
+        stu1.currentAverage()
+        stu2.currentAverage()
+        print(f' Current Average for {stu1.name} is {stu2.grades}')
+        print(f' Current Average for {stu2.name} is {stu2.grades}')
+        
+
+    else:
+        print("**** Selection Error *****")
+        print(f"{option} is not recognized.")
+        print("Please enter 0, 1, 2, or 3")
+        
