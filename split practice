@@ -1,0 +1,16 @@
+#
+# SEC290.FA2022.12362.B1
+# Zackary Capps
+# September 28 2022
+# Ex5-4
+#
+number_str = "28 81 27 4"
+
+total = 0
+
+numbers = number_str.split(" ")
+
+for num in numbers:
+    num = int(num)
+    total += num
+print(f'The total is {total}.')
