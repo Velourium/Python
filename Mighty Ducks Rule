@@ -1,4 +1,0 @@
-team = "Mighty ducks"
-status = "rule"
-punctuation = "!"
-print(team,status,punctuation)
