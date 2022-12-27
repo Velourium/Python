@@ -1,0 +1,3 @@
+date = input("Please enter the date: ")
+
+print(f"Oh, I am sorry. I am not available on {date}")
