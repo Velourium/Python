@@ -1,0 +1,14 @@
+mealcost = input("What is the cost of the meal? ")
+mealcost = float(mealcost)
+
+tip15 = mealcost * .15
+tip18 = mealcost * .18
+tip20 = mealcost * .20
+
+total15 = mealcost + tip15
+total18 = mealcost + tip18
+total20 = mealcost + tip20
+
+print(f'At 15, the tip would be ${tip15:.2f} and the total would be ${total15:.2f}.')
+print(f'At 18, the tip would be ${tip18:.2f} and the total would be ${total18:.2f}.')
+print(f'At 20, the tip would be ${tip20:.2f} and the total would be ${total20:.2f}.')
