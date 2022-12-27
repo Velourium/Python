@@ -1,0 +1,6 @@
+courses = """
+SEC310
+PHI314
+SEC450
+"""
+print(courses)
