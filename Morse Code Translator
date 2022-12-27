@@ -1,0 +1,66 @@
+#
+# SEC290.FA2022.12362.B1
+# Zackary Capps
+# October 2 2022
+# Hwk5 Step 3
+#
+
+
+def translate_to_morse(message):
+    word = message.upper()
+    encoded_word = list(message)
+    output = []
+    for character in encoded_word:
+        try:
+            output.append(alpha_to_morse[character.upper()])
+        except:
+            if character == ' ':
+                    output.append(' ')
+            else:
+                pass
+    return ' '.join(output)
+
+def translate_to_alpha(message):
+    mymorse = message.split(' ')
+    output = []
+    for morse in mymorse:
+        try:
+            output.append(morse_to_alpha[morse])
+        except:
+            if morse == ' ':
+                output.append(' ')
+            else:
+                pass
+    return ' '.join(output)
+    
+from morse import alpha_to_morse
+from morse import morse_to_alpha
+
+def menu():
+    print("Mose Code Translator")
+    print()
+    print("0: Exit ")
+    print("1: Translate a word into Morse Code")
+    print("2: Translate Morse Code to text.")
+    print()
+    
+
+   
+while True:
+    menu()
+    option = input("Please make a selection: ")
+    if option == "0":
+        print(" Done!")
+        break
+    elif option == "1" :
+        message = input("Please enter a letter to be translated to Morse Code: ")
+        code = translate_to_morse(message)
+        print(code)
+    elif option == "2" :
+        message = input("Please enter Morse Code to be translated to a letter: ")
+        print(translate_to_alpha(message))
+       
+    else:
+        print("**** Selection Error *****")
+        print(f"{option} is not recognized.")
+        print("Please enter 0, 1, or 2.")
