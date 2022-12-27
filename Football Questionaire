@@ -1,0 +1,13 @@
+print("""
+On a Scale of 1 to 3 how do you feel about Association Football? 1 is great and 3 is terrible.
+""")
+answer = input("How do you feel about Association Football (1-3)?  ")
+answer = int(answer)
+if answer == 1:
+    print("I love it, too!")
+elif answer == 2:
+    print("I could take it or leave it as well.")
+elif answer == 3:
+    print("Not my cup of tea, either.")
+else:
+    print("Please respond to the question with 1, 2 or 3!")
