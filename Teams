@@ -1,0 +1,35 @@
+#
+# SEC290.FA2022.12362.B1
+# Zackary Capps
+# October 12 2022
+# Wk7 ex1
+#
+class GolfTeam:
+    
+    count = 0
+    def __init__(self, name):
+        self.team_name = name
+        self.players = []
+        GolfTeam.count += 1
+    def add_player(self, name):
+        self.players.append(name)
+    def show_team(self):
+        print(f'Team {self.team_name}')
+        for player in self.players:
+            print(f'      {player}')
+            
+            
+print(f'Number of teams: {GolfTeam.count}')
+
+team_woods = GolfTeam("Woods")
+print(f'Number of teams: {GolfTeam.count}')
+team_woods.add_player("Woods")
+team_woods.add_player("Johnson")
+
+team_rahm = GolfTeam("Rahm")
+print(f'Number of teams: {GolfTeam.count}')
+team_rahm.add_player("Rahm")
+team_rahm.add_player("Finau")
+
+team_woods.show_team()
+team_rahm.show_team()
