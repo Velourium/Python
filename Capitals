@@ -1,0 +1,11 @@
+capitals = {}
+
+while True:
+    state = input("Please enter the name of a state: ")
+    if state == "q":
+        break
+    capital = input("Please enter the name of a capital: ")
+    if capital == "q":
+        break
+    capitals[state] = capital
+print(f'States and their capitals: {capitals}')
