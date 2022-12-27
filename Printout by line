@@ -1,0 +1,10 @@
+#
+# SEC290.FA2022.12362.B1
+# Zackary Capps
+# September 28 2022
+# Ex5-3
+#
+message = input("Please enter a message: ")
+
+for letter in message:
+    print(letter)
