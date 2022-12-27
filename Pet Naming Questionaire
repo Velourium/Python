@@ -1,0 +1,12 @@
+title = """
+    Pet
+   Naming
+Questionaire
+"""
+print(title)
+name = input("If you had a pet alligator, what would you name it? ")
+print(f"I would name it {name}! ")
+print(name)
+
+why = input("Why did you pick that name? ")
+print(why)
