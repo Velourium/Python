@@ -1,0 +1,14 @@
+party_list = ["Albert", "Rayshon", "Shaun", "Hannah", "Michael", "Jack", "Charles", "Angelica", "Jeremy", "Rebecca"]
+party_list.sort()
+print("Proposed Guest List")
+for classmate in party_list:
+    print(f'     {classmate}')
+print("Oops! It turns out one of your guests can't make it.")
+classmate_deletion = input("Please enter the index of the guest to be deleted from the list: ")
+classmate_integer = int(classmate_deletion)
+popped_classmate = party_list.pop()
+print(f'{popped_classmate} has been removed from the guest list.')
+add_classmate = input("Please invite another guest as a replacement: ")
+party_list.append(add_classmate)
+for classmate in party_list:
+    print(f'     {classmate}')
