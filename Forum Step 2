@@ -1,0 +1,58 @@
+#
+# SEC290.FA2022.12362.B1
+# Zackary Capps
+# October 9 2022
+# Hwk6 Step 2
+#
+import time
+st = 'step2_data.txt'
+fp = open("step2_data.txt")
+
+records = []
+
+try:
+    fp
+except FileNotFoundError:
+    print("File not found")
+    quit() 
+else:
+    with open(st) as fp:
+        line = fp.readline()
+        cnt = 1
+    for line_num, line in enumerate(fp, 1):
+        line1 = line.strip()
+                                
+
+
+
+
+def menu():
+    print("Forum Comments")
+    print("==============")
+    print("0: Exit ")
+    print("1: Display Comments")
+    print("2: Add Comment")
+    print()
+
+while True:
+    menu()
+    option = input("Please make your selection selection: ")
+    if option == "0":
+        print("Thank you for your participation!")
+        break
+    elif option == "1" :
+        [print(" =============== \n %s %s \n %s\n"%(item['name'],item['date'],item['comment'])) for item in records]
+    elif option == "2" :
+        date1 = time.ctime()
+        name1 = input("Please enter your name: ")
+        comment1 = input("Please enter a one line comment: ")
+        com_dict = {}
+        com_dict['name'] = name1
+        com_dict['date'] = date1
+        com_dict['comment'] = comment1
+        com_dict.update
+        records.append(com_dict)
+    else:
+        print("**** Selection Error *****")
+        print(f"{option} is not recognized.")
+        print("Please enter 0, 1, or 2.")
